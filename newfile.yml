@@ -1,0 +1,19 @@
+
+---
+- name: Setup Registration Directory and File
+  hosts: localhost
+  tasks:
+    - name: Create directory
+      file:
+        path: "/home/_73772114189"
+        state: directory
+
+    - name: Create 73772114189.txt
+      file:
+        path: "/home/_73772114189/73772114189.txt"
+        state: touch
+
+    - name: Install tree package
+      apt:
+        name: tree
+        state: present
